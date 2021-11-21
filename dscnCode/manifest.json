@@ -1,0 +1,23 @@
+{   
+    "manifest_version": 2,
+    "name": "dscnCode",
+    "description": "copy any in csdn",
+    "version": "1.0",
+    "content_scripts": [{
+        "matches": ["*://*.blog.csdn.net/*"],
+        "js": ["jquery.min.js", "csdnCode.js","main.js"],
+        "run_at": "document_start"
+      }
+    ],
+    "permissions": [
+        "storage",
+        "activeTab",
+        "tabs",
+        "*://*.blog.csdn.net/*",
+        "https://ajax.googleapis.com/"
+      ],
+      "web_accessible_resources": [
+        "*.css",
+        "*.js"
+      ]
+}
